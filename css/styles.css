@@ -1,0 +1,19 @@
+body{
+	width: 80%;
+	text-align: center;
+}
+*{
+	margin: auto;
+}
+canvas{
+    display: block;
+    padding: 5px;
+}
+button{
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+	font-size: 150%;
+	border-radius: 3px;
+}
