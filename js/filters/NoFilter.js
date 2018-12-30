@@ -1,4 +1,5 @@
 function NoFilter(){
+	this.title = "No Filter",
 	this.drawFilter = function(rawCanvas, filterCanvas){
 		var rawImg = rawCanvas.getContext("2d").getImageData(0, 0, rawCanvas.width, rawCanvas.height);
 		var filterImg = filterCanvas.getContext("2d").createImageData(filterCanvas.width, filterCanvas.height);

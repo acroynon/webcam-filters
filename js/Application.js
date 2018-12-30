@@ -20,8 +20,10 @@ function Application(){
 		this.mirrorVideoToCanvas(videoElem, bufferCanvas);
 		this.applyFilter(bufferCanvas, canvas);
 
-		this.createFilterButton("No Filter", new NoFilter(), buttonContainer, document);
-		this.createFilterButton("Black & White", new BlackWhiteFilter(), buttonContainer, document);
+		this.createFilterButton(new NoFilter(), buttonContainer, document);
+		this.createFilterButton(new BlackWhiteFilter(), buttonContainer, document);
+		this.createFilterButton(new SepiaFilter(), buttonContainer, document);
+		this.createFilterButton(new ThreeBitFilter(), buttonContainer, document);
 	},
 
 	this.setupWebcamVideo = function(videoElem){
@@ -58,10 +60,10 @@ function Application(){
 		this.filter = newFilter;
 	}
 
-	this.createFilterButton = function(text, filter, parentElem, document){
+	this.createFilterButton = function(filter, parentElem, document){
 		var that = this;
 		var btn = document.createElement("button");
-		btn.innerText = text;
+		btn.innerText = filter.title;
 		parentElem.appendChild(btn);
 		btn.onclick = function(){
 			that.setFilter(filter);
