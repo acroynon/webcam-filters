@@ -23,7 +23,7 @@ function Application(){
 		this.createFilterButton(new NoFilter(), buttonContainer, document);
 		this.createFilterButton(new BlackWhiteFilter(), buttonContainer, document);
 		this.createFilterButton(new SepiaFilter(), buttonContainer, document);
-		this.createFilterButton(new ThreeBitFilter(), buttonContainer, document);
+		this.createFilterButton(new RetroFilter(), buttonContainer, document);
 	},
 
 	this.setupWebcamVideo = function(videoElem){
